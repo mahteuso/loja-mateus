@@ -1,4 +1,4 @@
-package com.loja_mateus.model;
+package com.laboratorio_fisica.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,9 +23,14 @@ public class Equipamento implements Serializable {
 
     private String nome;
 
+    @Column(columnDefinition = "TEXT")
     private String descricao;
 
     private String patrimonio;
 
     private LocalDateTime criacao;
+
+    private Boolean ativo;
+
+    private String imagemArquivo;
 }

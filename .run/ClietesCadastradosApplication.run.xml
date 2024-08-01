@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="ClietesCadastradosApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="com.loja_mateus.ClietesCadastradosApplication" />
+    <option name="MAIN_CLASS_NAME" value="com.laboratorio_fisica.ClietesCadastradosApplication" />
     <module name="clietes-cadastrados" />
     <extension name="coverage">
       <pattern>
