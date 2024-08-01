@@ -1,7 +1,7 @@
-create table clientes(
+create table Equipamentos(
     id serial primary key,
     nome varchar(255) not null,
-    sobrenome varchar(255) not null,
-    cpf varchar(255) not null,
-    email varchar(255) not null
+    descricao varchar not null,
+    patrimonio varchar(255) not null,
+    criacao date not null
 );

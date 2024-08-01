@@ -7,14 +7,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "clientes")
+@Table(name = "equipamentos")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cliente implements Serializable {
+public class Equipamento implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,11 +23,9 @@ public class Cliente implements Serializable {
 
     private String nome;
 
-    private String sobrenome;
+    private String descricao;
 
-    private String cpf;
+    private String patrimonio;
 
-    private String telefone;
-
-    private String email;
+    private LocalDateTime criacao;
 }

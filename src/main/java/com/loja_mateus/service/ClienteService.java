@@ -1,15 +1,17 @@
 package com.loja_mateus.service;
 
 import com.loja_mateus.dto.ClienteDto;
-import com.loja_mateus.model.Cliente;
+import com.loja_mateus.model.Equipamento;
 
 import java.util.List;
 
 public interface ClienteService {
 
-    Cliente save(ClienteDto dto);
+    Equipamento save(ClienteDto dto);
 
-    List<Cliente> findAll();
+    List<Equipamento> findAll();
 
-    Cliente findById(Long id);
+    Equipamento findById(Long id);
+
+    Equipamento update(ClienteDto dto, Long id);
 }

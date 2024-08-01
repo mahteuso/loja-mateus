@@ -14,18 +14,18 @@
     <h1>CADASTRAR CLIENTE</h1>
 
     <div class="row">
-        <form class="col s12" action="/loja-mateus/cadastro-cliente/cadastrado"  method="post"
-              th:object="${clienteobj}">
+        <form class="col s12" action="/loja-mateus/update/{idcliente}"  method="post" th:object="${clienteobj}">
 
-            <!--            <div class="row">-->
-            <!--                <div class="input-field col s6">-->
-            <!--                    <input name="id" id="id"  th:field="*{id}">-->
-            <!--                    <label for="id">Nome</label>-->
-            <!--                </div>-->
             <div class="row">
                 <div class="input-field col s6">
-                    <input name="nome" id="nome" type="text" class="validate" th:field="*{nome}">
-                    <label  class="active" for="nome">Nome</label>
+                    <input name="id" id="id" th:field="*{id}"  readonly="readonly">
+                    <label class="active" for="id">ID</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input name="nome" id="first_name" type="text" class="validate" th:field="*{nome}">
+                    <label class="active" for="first_name">Nome</label>
                 </div>
                 <div class="input-field col s6">
                     <input name="sobrenome" id="sobrenome" type="text" class="validate" th:field="*{sobrenome}">
@@ -56,7 +56,8 @@
             <div class="row">
                 <input type="submit" value="Cadastrar" class="waves-effect waves-light btn col s4">
                 <div class="col s4"></div>
-                <span class="flow-text"><a class="waves-effect waves-light btn col s4" align="right" href="/loja-mateus">Voltar para Home</a></span>
+                <span class="flow-text"><a class="waves-effect waves-light btn col s4" align="right"
+                                           href="/loja-mateus">Voltar para Home</a></span>
             </div>
 
         </form>
