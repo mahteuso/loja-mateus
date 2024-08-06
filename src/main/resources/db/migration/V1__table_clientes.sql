@@ -3,7 +3,6 @@ create table Equipamentos(
     nome varchar(255) not null,
     descricao TEXT,
     patrimonio varchar(255) not null,
-    criacao date not null,
-    ativo boolean not null,
-    imagemArquivo varchar(255)
+    data_de_criacao varchar not null,
+    ativo boolean not null
 );

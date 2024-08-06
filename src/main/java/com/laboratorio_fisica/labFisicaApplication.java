@@ -5,10 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 
-public class ClietesCadastradosApplication {
+public class labFisicaApplication {
+
 
 	public static void main(String[] args) {
-		SpringApplication.run(ClietesCadastradosApplication.class, args);
+		SpringApplication.run(labFisicaApplication.class, args);
 	}
 
 }

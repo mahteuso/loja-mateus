@@ -28,9 +28,9 @@ public class Equipamento implements Serializable {
 
     private String patrimonio;
 
-    private LocalDateTime criacao;
+    @Column(name = "data_de_criacao")
+    private String dataCriacao;
 
     private Boolean ativo;
 
-    private String imagemArquivo;
 }
