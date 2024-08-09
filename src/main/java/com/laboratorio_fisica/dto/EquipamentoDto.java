@@ -21,14 +21,14 @@ public class EquipamentoDto {
     private Long id;
 
     @NotBlank(message = " Não pode ser nulo ou vazio")
-    @Size(min = 5, message = " Valor mínimo de 5 caracteres")
+    @Size(min = 5, message = " Deve ter mínimo de 5 caracteres")
     private String nome;
 
-    @Size(min = 5, message = " Valor mínimo de 5 caracteres")
+    @Size(min = 5, message = "Deve ter mínimo de 10 caracteres")
     private String descricao;
 
     @NotBlank(message = " Não pode ser nulo ou vazio")
-    @Size(min = 6, max = 6, message = " Valor de 6 caracteres")
+    @Size(min = 6, max = 6, message = " Deve conter 6 caracteres")
     private String patrimonio;
 
     private String dataCriacao;

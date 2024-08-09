@@ -9,26 +9,10 @@
 </head>
 <body>
 <div class="container-fluid">
+
     <div class="p-3 mb-2 bg-primary text-white">
         <h1 class="text-center">Equipamentos do Laboratório de Física </h1>
     </div>
-    <div class="col py-1 px-md-1"></div>
-    <div class="mx-auto">
-        <div class="mx-auto">
-            <form action="/laboratorio_fisica/pesquisar" method="post">
-                <div class="mx-auto" align="center">
-                    <label>Pesquisar equipamento:</label>
-                    <div class="mx-auto">
-                        <input  name="nomepesquisa">
-                        <div class="col py-1 px-md-1"></div>
-                        <input class="btn btn-secondary" type="submit" value="pesquisar">
-                    </div>
-                </div>
-
-            </form>
-        </div>
-    </div>
-    <div class="col py-3 px-md-1"></div>
 
     <table class="table table-striped">
         <thead>
@@ -42,24 +26,24 @@
         </tr>
 
         </thead>
+
         <tbody>
 
-        <tr th:each="equipamento : ${equipamentos}">
-            <td th:text="${equipamento.id}"></td>
-            <td ><a class="link-underline-light"
-                    th:href="@{/dados/{id}(id=${equipamento.id})}"><span th:text="${equipamento.nome}"></span></a></td>
-            <td th:text="${equipamento.descricao}"></td>
-            <td th:text="${equipamento.patrimonio}"></td>
-            <td th:text="${equipamento.dataCriacao}"></td>
-            <td th:text="${equipamento.ativo}"></td>
+        <tr>
+            <td th:text="${equipamentos.id}"></td>
+            <td th:text="${equipamentos.nome}"></td>
+            <td th:text="${equipamentos.descricao}"></td>
+            <td th:text="${equipamentos.patrimonio}"></td>
+            <td th:text="${equipamentos.dataCriacao}"></td>
+            <td th:text="${equipamentos.ativo}"></td>
 
             <td style="white-space:nowrap">
                 <div class="container-fluid">
                     <a class="btn btn-primary btn-sm"
-                       th:href="@{/editar/{id}(id=${equipamento.id})}">Editar</a>
+                       th:href="@{/laboratorio_fisica/editar-equipamento(id=${equipamento.id})}">Editar</a>
 
                     <a class="btn btn-danger btn-sm"
-                       th:href="@{/deletar/{id}(id=${equipamento.id})}"
+                       th:href="@{/laboratorio_fisica/deletar-equipamento(id=${equipamento.id})}"
                        onclick="return confirm('Tem certeza?')">Deletar</a>
                 </div>
             </td>
@@ -69,7 +53,7 @@
     </table>
 
     <div class="row">
-
+        <div class="p-3 mb-2 bg-body text-body"></div>
         <p align="center"><a class="btn btn-primary"
                              href="/laboratorio_fisica/equipamentos-cadastro">Cadastrar Equipamento</a></p>
     </div>

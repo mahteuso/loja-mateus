@@ -8,29 +8,40 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
-    <h1 class="text-center my-4">Cadastrar Equipamento</h1>
-    <div class="row">
+<div class="container-fluid">
+    <div class="p-3 mb-2 bg-primary text-white">
+        <h1 class="text-center">Cadastro de Equipamentos</h1>
+    </div>
+    <div class="container">
         <div class="col-md-8 mx-auto rounded border p-4 m-4">
             <h2 class="text-center mb-5">Novo Equipamento</h2>
+            <br/>
+            <div th:each="m : ${msg}">
+                <span th:text="${m}"></span>
+            </div>
+            <br/>
 
             <form action="/laboratorio_fisica/cadastrado" method="post" th:object="${equipamentos}">
                 <div class="row mb-3">
-                    <label class="col-sm-4 col-form-label" >Nome</label>
+                    <label  class="col-sm-4 col-form-label form-label">Nome</label>
                     <div class="col-sm-8">
-                        <input class="form-control" th:field="${equipamentos.nome}">
+                            <input class="form-control"  type="text" th:field="*{nome}">
+
                     </div>
+
                 </div>
                 <div class="row mb-3">
-                    <label class="col-sm-4 col-form-label">Descrição</label>
+                    <label  class="col-sm-4 col-form-label">Descrição</label>
                     <div class="col-sm-8">
-                        <textarea class="form-control" th:field="${equipamentos.descricao}"></textarea>
+                        <textarea class="form-control"
+                                  th:field="${equipamentos.descricao}"></textarea>
                     </div>
+
                 </div>
                 <div class="row mb-3">
                     <label class="col-sm-4 col-form-label">Patrimônio</label>
                     <div class="col-sm-8">
-                        <input class="form-control" th:field="${equipamentos.patrimonio}">
+                        <input class="form-control " th:field="${equipamentos.patrimonio}">
                     </div>
                 </div>
                 <div class="row mb-3">
