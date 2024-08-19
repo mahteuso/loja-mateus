@@ -20,7 +20,6 @@ public class EquipamentoController {
 
     @Autowired
     private EquipamentoService equipamentoService;
-    ''
 
     @GetMapping({"", "/"})
     public String index(Model model) {
